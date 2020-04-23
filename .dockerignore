@@ -1,0 +1,6 @@
+/logs
+/scratch
+/road
+/videos
+/env
+*__pycache__
