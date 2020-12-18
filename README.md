@@ -65,7 +65,7 @@ $ apt-get install -y python3-pip
 $ apt-get install -y software-properties-common
 $ add-apt-repository ppa:sumo/stable
 $ apt-get update
-$ apt-get install -y sumo=1.7.0+dfsg1-2 sumo-tools=1.7.0+dfsg1-2 sumo-doc
+$ apt-get install -y sumo=1.8.0+dfsg1-1 sumo-tools=1.8.0+dfsg1-1 sumo-doc
 $ export SUMO_HOME="/usr/share/sumo"
 ```
 
