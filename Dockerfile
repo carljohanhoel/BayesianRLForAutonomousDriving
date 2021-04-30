@@ -6,7 +6,7 @@ RUN apt-get update \
    && apt-get install -y software-properties-common \
    && add-apt-repository ppa:sumo/stable \
    && apt-get update \
-   && apt-get install -y sumo=1.8.0+dfsg1-1 sumo-tools=1.8.0+dfsg1-1 sumo-doc
+   && apt-get install -y sumo sumo-tools sumo-doc
 ENV SUMO_HOME "/usr/share/sumo"
 WORKDIR /app
 COPY requirements.txt .
