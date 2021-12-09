@@ -53,20 +53,22 @@ Displayed in x1 real time.
 
 #### Prerequisites
 
-Python and Simulation of Urban Mobility ([SUMO](http://sumo.sourceforge.net/)).
+Python and Simulation of Urban Mobility ([SUMO](http://sumo.sourceforge.net/)), version 1.8 (something have changed in the interface in later versions, and I have not had the time to update the code).
 
-Install and set SUMO environment variable:
+Install SUMO from source (tested for ubuntu 18.04):
 
 ```shell
 $ apt-get update
-$ apt-get install -y python3.7
-$ apt-get install -y python3.7-dev
-$ apt-get install -y python3-pip
-$ apt-get install -y software-properties-common
-$ add-apt-repository ppa:sumo/stable
-$ apt-get update
-$ apt-get install -y sumo sumo-tools sumo-doc
-$ export SUMO_HOME="/usr/share/sumo"
+$ apt-get install -y git cmake python3.7 python3-pip g++ libxerces-c-dev libfox-1.6-dev libgdal-dev libproj-dev libgl2ps-dev
+$ git clone --depth 1 --branch v1_8_0 https://github.com/eclipse/sumo
+$ mkdir sumo/build/cmake-build
+$ cd sumo/build/cmake-build
+$ cmake ../..
+$ make -j$(nproc)
+$ make install
+$ cd ../../..
+$ rm -r sumo
+$ export SUMO_HOME="/usr/local/share/sumo"
 ```
 
 Install dependencies:
